@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Todo</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_walk_through">Tasks and assign</string>
+    <string name="Successful">Successful</string>
+    <string name="you_have_successfully_">You have successfully changed password Please use your new passwords when logging in</string>
+    <string name="sub_title_walk_through">Task and assign them to colleagues</string>
+    <string name="button_get_started">Get Started</string>
+    <string name="button_log_in">Log In</string>
+    <string name="button_change_password">Change password</string>
+    <string name="button_send_request">Send Request</string>
+    <string name="title_sign_up_ui">Welcome !</string>
+    <string name="sub_title_sign_up">Sign up to continue</string>
+    <string name="title_username">Username</string>
+    <string name="title_email">Email</string>
+    <string name="title_reset_code">Reset Code</string>
+    <string name="title_password">Password</string>
+    <string name="title_confirm_password">Confirm Password</string>
+    <string name="new_password">New Password</string>
+    <string name="button_sign_up">Sign up</string>
+    <string name="hint_username">John Doe</string>
+    <string name="hint_email">Johndoe@gmail.com</string>
+    <string name="hint_code">123456</string>
+    <string name="hint_password">******</string>
+    <string name="title_login">Welcome Back</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="enter_email_below">Please enter your email below to receive your password reset instruction</string>
+    <string name="sub_title_login">Sign in to continue</string>
+    <string name="reset_code">Reset code was sent to your email. Please enter the code and create new password</string>
+    <string name="text_forgot_password">Forgot Password</string>
+    <string name="text_donot_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="empty_field">Field can\'t be empty</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="Okay">Okay</string>
+    <string name="please_check_network">Please check network connection</string>
+    <string name="went_wrong">Something went wrong</string>
+    <string name="sign_up_successful">Sign up successful !</string>
+    <string name="password_not_match">Confirm password doesn\'t match</string>
+    <string name="password_length">minimum password lenght 6</string>
+</resources>
