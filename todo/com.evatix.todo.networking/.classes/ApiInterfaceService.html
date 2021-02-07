@@ -1,0 +1,87 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: ApiInterfaceService</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.evatix.todo.networking</a> ]
+</div>
+
+<h1>Coverage Summary for Class: ApiInterfaceService (com.evatix.todo.networking)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">ApiInterfaceService</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.evatix.todo.networking
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.evatix.todo.model.LoginResponse
+<i>4</i>&nbsp;import com.evatix.todo.model.SignUpResponse
+<i>5</i>&nbsp;import com.mymaskreminder.networking.ApiEndPoint.LOGIN_API
+<i>6</i>&nbsp;import com.mymaskreminder.networking.ApiEndPoint.REGISTER_API
+<i>7</i>&nbsp;import retrofit2.Call
+<i>8</i>&nbsp;import retrofit2.http.Field
+<i>9</i>&nbsp;import retrofit2.http.FormUrlEncoded
+<i>10</i>&nbsp;import retrofit2.http.Headers
+<i>11</i>&nbsp;import retrofit2.http.POST
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;interface ApiInterfaceService {
+<i>14</i>&nbsp;
+<i>15</i>&nbsp;    @FormUrlEncoded
+<i>16</i>&nbsp;    @Headers(
+<i>17</i>&nbsp;        &quot;Accept: application/json&quot;
+<i>18</i>&nbsp;    )
+<i>19</i>&nbsp;    @POST(LOGIN_API)
+<i>20</i>&nbsp;    fun doLogin(
+<i>21</i>&nbsp;        @Field(&quot;email&quot;) email: String?,
+<i>22</i>&nbsp;        @Field(&quot;password&quot;) password: String?
+<i>23</i>&nbsp;    ): Call&lt;LoginResponse&gt;
+<i>24</i>&nbsp;
+<i>25</i>&nbsp;    @FormUrlEncoded
+<i>26</i>&nbsp;    @Headers(
+<i>27</i>&nbsp;        &quot;Accept: application/json&quot;
+<i>28</i>&nbsp;    )
+<i>29</i>&nbsp;    @POST(REGISTER_API)
+<i>30</i>&nbsp;    fun createAccount(
+<i>31</i>&nbsp;        @Field(&quot;username&quot;) username: String?,
+<i>32</i>&nbsp;        @Field(&quot;email&quot;) email: String?,
+<i>33</i>&nbsp;        @Field(&quot;password&quot;) password: String?
+<i>34</i>&nbsp;    ): Call&lt;SignUpResponse&gt;
+<i>35</i>&nbsp;
+<i>36</i>&nbsp;
+<i>37</i>&nbsp;
+<i>38</i>&nbsp;
+<i>39</i>&nbsp;
+<i>40</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-02-07 22:11</div>
+</div>
+</body>
+</html>

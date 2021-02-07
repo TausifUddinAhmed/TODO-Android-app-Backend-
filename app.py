@@ -51,7 +51,7 @@ def signup():
             conn.commit()
             cursor2.close()
             conn.close()
-            res={"response": "signup complete"}
+            res={"response": "success"}
             return jsonify(res)
     except:
         res={"response": "failed"}
@@ -64,15 +64,15 @@ def login():
     try:
         if request.method =='POST':
 
-            print (request.form['username'])
+            print (request.form['email'])
             print (request.form['password'])
 
-            a_username = request.form['username']
+            a_email = request.form['email']
             a_password = request.form['password']
 
                
                 
-            cursor3.execute("SELECT UserName,PasswordHash FROM user")
+            cursor3.execute("SELECT Email,PasswordHash FROM user")
             users = cursor3.fetchall()
 
             user_data = json.dumps(users)
@@ -82,8 +82,8 @@ def login():
            
             for userall in user_data2:
 
-                if userall["UserName"] == a_username and userall["PasswordHash"] == a_password:
-                    res={"response": "Successful Login"}
+                if userall["Email"] == a_email and userall["PasswordHash"] == a_password:
+                    res={"response": "success"}
                     return jsonify(res)  
     
             else:
