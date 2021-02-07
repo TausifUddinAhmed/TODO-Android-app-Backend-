@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/WalkThroughFragment">
+
+    <fragment
+        android:id="@+id/WalkThroughFragment"
+        android:name="com.evatix.todo.WalkThroughFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_walk_through">
+
+
+        <action
+            android:id="@+id/action_WalkThroughFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_WalkThroughFragment_to_RegistrationFragment"
+            app:destination="@id/RegistrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RegistrationFragment"
+        android:name="com.evatix.todo.ui.signup.RegistrationFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_registration">
+
+
+        <action
+            android:id="@+id/action_RegistrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.evatix.todo.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login"
+        >
+        <action
+            android:id="@+id/action_loginFragment_to_todoFragment"
+            app:destination="@id/todoFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todoFragment"
+        android:name="com.evatix.todo.ui.TodoFragment"
+        android:label="fragment_todo"
+        tools:layout="@layout/fragment_todo" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.evatix.todo.ui.forgotpassword.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password"
+        >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.evatix.todo.ui.forgotpassword.ResetPasswordFragment"
+        android:label="ResetPasswordFragment"
+        tools:layout="@layout/fragment_reset_password"
+        >
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_restPasswordSuccesFragment"
+            app:destination="@id/restPasswordSuccesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restPasswordSuccesFragment"
+        android:name="com.evatix.todo.ui.forgotpassword.RestPasswordSuccesFragment"
+        android:label="RestPasswordSuccesFragment"
+        tools:layout="@layout/fragment_rest_password_succes"
+        >
+        <action
+            android:id="@+id/action_restPasswordSuccesFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>
